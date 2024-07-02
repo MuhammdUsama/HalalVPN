@@ -47,6 +47,8 @@ dev_dependencies:
   your_splash: ^0.2.2
   drawerbehavior: ^2.2.1
   google_fonts: ^2.3.3
+  syncfusion_flutter_gauges: ^20.1.55
+  http:
 
 
 

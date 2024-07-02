@@ -4,8 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:drawerbehavior/drawerbehavior.dart';
 import 'package:drawerbehavior/drawerbehavior.dart' as ii;
 import 'package:google_fonts/google_fonts.dart';
+import 'package:halal_vpn/LoginScreen.dart';
 
 import 'CommingSoon.dart';
+import 'HomeScreen.dart';
+import 'SpeedTestScreen.dart';
 import 'Utility.dart';
 
 class DrawerSlide extends StatefulWidget {
@@ -161,6 +164,11 @@ class _DrawerSlideState extends State<DrawerSlide> {
                               // ),
                               onPressed: () {
                                 print("hello");
+                                Navigator.push(
+                                            context,
+                                            MaterialPageRoute(
+                                                builder: (context) => LoginScreen()),
+                                          );
                                 //goToLogin(context,"","");
                               },
                             ),
@@ -271,9 +279,9 @@ class _DrawerSlideState extends State<DrawerSlide> {
           DrawerScaffold(
 
             appBar: AppBar(
-                backgroundColor: AppColors.backgroundColor,
+                backgroundColor: Color(0xFF303030),
                 elevation: 0,
-                title: Text(menu.items[selectedMenuItemId].title),
+                title: Text(menu.items[selectedMenuItemId].title == "Home" ? "Halal VPN":menu.items[selectedMenuItemId].title),
                 centerTitle: true,
                 flexibleSpace: Container(
                   margin: EdgeInsets.only(top: kIsWeb ? 0 : 28),
@@ -285,16 +293,16 @@ class _DrawerSlideState extends State<DrawerSlide> {
                   ),
                 ),
                 actions: [
-                  InkWell(
-                    child: Icon(
-                      Icons.person,
-                      color: Colors.white,
-                      size: 28,
-                    ),
-                    onTap: () {
-                     // opensheet();
-                    },
-                  ),
+                  // InkWell(
+                  //   child: Icon(
+                  //     Icons.person,
+                  //     color: Colors.white,
+                  //     size: 28,
+                  //   ),
+                  //   onTap: () {
+                  //    // opensheet();
+                  //   },
+                  // ),
                   SizedBox(
                     width: 12,
                   )
@@ -347,10 +355,10 @@ class _DrawerSlideState extends State<DrawerSlide> {
     switch (page) {
       case "Home":
         print("Home page");
-        return CommingSoon();
+        return HomeScreen();
       case "Speed Test":
         print("My Account");
-        return CommingSoon();
+        return SpeedTestScreen();
       case "Language":
         print("FavPostPage");
         return CommingSoon();

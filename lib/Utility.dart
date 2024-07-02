@@ -19,6 +19,7 @@ class AppColors {
   static  Color white = Colors.white;
   static  Color blackTextColor = Color(0xFF102C2F);
   static  Color borderGrey = Color(0xFFD8DADC);
+  static  Color textGrey = Color(0xFFA5A5A5);
   static  Color themeMainColor = Color(0xFF11E3BF);
   static  Color themeYellowColor = Color(0xFFFFCF40);
   static  Color appbarBG = Color(0xFF102C2F);
